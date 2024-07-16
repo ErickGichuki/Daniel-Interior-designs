@@ -1,22 +1,55 @@
 from config import *
+from sqlalchemy.ext.associationproxy import association_proxy
+from sqlalchemy.orm import validates
+
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     email = db.Column(db.String, nullable=False, unique=True)
+    phone = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
+    projects = db.relationship('Project', cascade='all, delete-orphan', back_populates='user')
+    projects = association_proxy('booking', 'project')
 
-class Client(db.Model, SerializerMixin):
-    __tablename__ = 'clients'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, nullable=False)
-    email = db.Column(db.String, nullable=False)
-    phone = db.Column(db.Integer, nullable=False)
+    @validates('email')
+    def validate_email(self, key, address):
+        if '@' not in address:
+            raise ValueError('Failed to validate the email')
+        return address
+    def __repr__(self):
+        return f'<User {self.name} with {self.phone}>'
 
 class Project(db.Model, SerializerMixin):
     __tablename__ = 'projects'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
     description = db.Column(db.String, nullable=False)
-    client_name = db.Column(db.Integer, ForeignKey('clients.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    booking = db.relationship('Booking', cascade='all, delete-orphan', back_populates='project')
+
+    def __repr__(self):
+        return f'<Project {self.name} {self.description}>'
+
+class Booking(db.Model, SerializerMixin):
+    __tablename__ = 'bookings'
+    id = db.Column(db.Integer, primary_key=True)
+    project_id = db.Column(db.Integer, db.ForeignKey('projects.id'))
+    service_id = db.Column(db.Integer, db.ForeignKey('services.id'))
+    service = db.relationship('User', back_populates='booking')
+    project = db.relationship('Project', back_populates='booking')
+
+    def __repr__(self):
+        return f'<Booking {self.id}>'
+
+class Service(db.Model, SerializerMixin):
+    __tablename__ = 'services'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Integer, nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    booking = db.relationship('Booking', cascade='all, delete-orphan', back_populates='service')
+
+    def __repr__(self):
+        return f'Service {self.name} will cost you {self.price}'
+    
