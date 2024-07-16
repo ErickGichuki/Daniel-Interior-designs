@@ -11,13 +11,15 @@ class User(db.Model, SerializerMixin):
     phone = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
     projects = db.relationship('Project', cascade='all, delete-orphan', back_populates='user')
-    projects = association_proxy('booking', 'project')
+    projects = association_proxy('bookings', 'project')
+    bookings = db.relationship('Booking', cascade='all, delete-orphan', back_populates='user')
 
     @validates('email')
     def validate_email(self, key, address):
         if '@' not in address:
             raise ValueError('Failed to validate the email')
         return address
+    
     def __repr__(self):
         return f'<User {self.name} with {self.phone}>'
 
@@ -37,8 +39,9 @@ class Booking(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     project_id = db.Column(db.Integer, db.ForeignKey('projects.id'))
     service_id = db.Column(db.Integer, db.ForeignKey('services.id'))
-    service = db.relationship('User', back_populates='booking')
+    service = db.relationship('Service', back_populates='booking')
     project = db.relationship('Project', back_populates='booking')
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
     def __repr__(self):
         return f'<Booking {self.id}>'
@@ -46,7 +49,7 @@ class Booking(db.Model, SerializerMixin):
 class Service(db.Model, SerializerMixin):
     __tablename__ = 'services'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.Integer, nullable=False)
+    name = db.Column(db.String, nullable=False)
     price = db.Column(db.Float, nullable=False)
     booking = db.relationship('Booking', cascade='all, delete-orphan', back_populates='service')
 
