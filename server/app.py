@@ -10,7 +10,7 @@ def signup():
     data = request.get_json()
     hashed_password = bcrypt.generate_password_hash(data['password']).decode('utf-8')
     new_user = User(
-        name = data['name'],
+        username = data['username'],
         email = data['email'],
         password = hashed_password
     )
