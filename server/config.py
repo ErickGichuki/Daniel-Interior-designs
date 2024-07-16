@@ -17,6 +17,8 @@ metadata = MetaData(
 app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///tony.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = '27f4dca617b04e3ab8b02625279e0f5c'
+app.config['JWT_SECRET_KEY'] = 'Great2024'
 
 db=SQLAlchemy(metadata=metadata)
 db.init_app(app)

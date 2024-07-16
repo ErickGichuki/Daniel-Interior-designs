@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Login() {
+
   return (
     <div className='min-h-screen flex items-center justify-center bg-gradient-to-r from-green-600 via-yellow-600 to-red-600'>
       <div className='flex flex-col md:flex-row bg-white shadow-lg rounded-xl overflow-hidden'>
