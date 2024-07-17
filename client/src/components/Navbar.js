@@ -13,11 +13,11 @@ function Navbar() {
           </div>
           <p className='ml-3'>Daniel Interior Designs</p>
           <div className='flex ml-auto'>
-            <NavLink to='/home' className='mr-6'>Home</NavLink>
-            <NavLink to='/about' className='mr-6'>About</NavLink>
-            <NavLink to='/services' className='mr-6'>Services</NavLink>
-            <NavLink to='/contact' className='mr-6'>Contact us</NavLink>
-            <NavLink to='/' className='mr-6'>Logout</NavLink>
+            <NavLink to='/home' className='mr-6 hover:text-green-500'>Home</NavLink>
+            <NavLink to='/about' className='mr-6 hover:text-green-500'>About</NavLink>
+            <NavLink to='/services' className='mr-6 hover:text-green-500'>Services</NavLink>
+            <NavLink to='/contact' className='mr-6 hover:text-green-500'>Contact us</NavLink>
+            <NavLink to='/' className='mr-6 hover:text-green-500'>Logout</NavLink>
           </div>
         </div>
       </div>
