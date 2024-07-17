@@ -6,7 +6,7 @@ function Navbar() {
     <nav className='p-4 bg-dark-blue text-white'>
       <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between'>
-          <div>
+          <div className='flex items-center'>
             <Link to='/home'>
               <img src='/tony.png' alt='logo' className='w-12 rounded-3xl'/>
             </Link>

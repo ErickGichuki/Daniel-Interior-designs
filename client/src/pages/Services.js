@@ -5,6 +5,10 @@ function Services() {
   return (
     <div>
       <Navbar/>
+      <div>
+        <h2>We offer the following services</h2>
+        
+      </div>
     </div>
   )
 }

@@ -39,7 +39,7 @@ def service():
 
     service = Service(
         name = data['name'],
-        price = data['price']
+        description = data['description']
     )
     db.session.add(service)
     db.session.commit()
