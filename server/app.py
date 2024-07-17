@@ -1,5 +1,5 @@
 from config import *
-from models import User
+from models import User, Service
 
 @app.route('/')
 def index():
@@ -32,6 +32,33 @@ def login():
     
     access_token = create_access_token(identity={'id':user.id})
     return make_response(jsonify(access_token=access_token, user=user.to_dict()), 200)
+
+@app.route('/service', methods=['POST'])
+def service():
+    data = request.get_json()
+
+    service = Service(
+        name = data['name'],
+        price = data['price']
+    )
+    db.session.add(service)
+    db.session.commit()
+
+    return make_response(jsonify({'message': 'service created successfully'}), 201)
+
+@app.route('/service/<int:id>', methods=['DELETE'])
+def delete_service(id):
+    service = Service.query.filter(Service.id==id).first()
+    db.session.delete(service)
+    db.session.commit()
+    return make_response(jsonify({'message': 'service deleted successfully'}), 200)
+
+@app.route('/service', methods=['GET'])
+def get_service():
+    services = Service.query.all()
+    service_list = [service.to_dict() for service in services]
+    return make_response(jsonify(service_list), 200)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -52,7 +52,7 @@ class Service(db.Model, SerializerMixin):
     __tablename__ = 'services'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
-    price = db.Column(db.Float, nullable=False)
+    description = db.Column(db.String, nullable=False)
 
     bookings = db.relationship('Booking', cascade='all, delete-orphan', back_populates='service')
 
