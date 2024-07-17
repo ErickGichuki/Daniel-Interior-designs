@@ -9,6 +9,7 @@ def index():
 def signup():
     data = request.get_json()
     hashed_password = bcrypt.generate_password_hash(data['password']).decode('utf-8')
+    
     new_user = User(
         username = data['username'],
         email = data['email'],
@@ -24,10 +25,13 @@ def login():
     data = request.get_json()
     if not data or 'email' not in data or 'password' not in data:
         return make_response(jsonify({'message': 'You are needed to enter the email and password'}))
+    
     user = User.query.filter_by(email=data['email']).first()
     if not user or not bcrypt.check_password_hash(user.password, data['password']):
         return make_response(jsonify({'message': 'Invalid email or password'}), 401)
+    
     access_token = create_access_token(identity={'id':user.id})
     return make_response(jsonify(access_token=access_token, user=user.to_dict()), 200)
+
 if __name__ == '__main__':
     app.run(debug=True)

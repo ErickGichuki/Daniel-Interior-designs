@@ -1,22 +1,22 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
-import Signup from './pages/Signup';
+import Signup from './components/Signup';
+import Login from './components/Login';
 
 function App() {
   return (
     <Router>
-      <Login/>
       <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path='/' element={<Signup/>} />
+        <Route path='/home' element={<Home/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/services' element={<Services/>} />
-        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </Router>
   );
