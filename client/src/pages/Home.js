@@ -1,71 +1,29 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
-
 function Home() {
   return (
-    <div>
-      <Navbar/>
-      <div className='bg-blue-200 flex flex-col md:flex-row p-4'>
-        <div className='flex flex-col md:w-1/2 p-4'>
-          <h1 className='font-bold text-2xl mb-2'>Discover the best Interior Designs around you today</h1>
-          <p className='mb-4'>Where quality is delivered to the maximum!</p>
-          <div className='flex space-x-4'>
-            <button
-            className='bg-green-500 text-white py-2 px-4 rounded-lg'
-            >
-              Watch video
-            </button>
-            <button
-            className='bg-blue-700 text-white py-2 px-4 rounded-lg'
-            >
-              Visit us
-            </button>
-          </div>
-        </div>
-        <div className='flex items-center justify-end p-2 md:w-1/2'>
-          <img
-          src='/Daniel.png'
-          alt='daniel'
-          className='w-40 rounded-xl'
-          />
-        </div>
-      </div>
-      <div>
-        <div className='mb-4 justify-center items-center'>
-          <h2 className='font-bold text-xl mb-2'>Featured on</h2>
-          <div className='flex flex-row w-3/4 space-x-4 bg-dark-blue ml-4 text-white rounded text-center py-3 justify-center md:flex flex-row w-3/4'>
-            <p>Gypsum</p>
-            <p>Marble painting</p>
-            <p>Project Management</p>
-            <p>Furniture speciality</p>
-          </div>
-        </div>
-        <div className='bg-gray-100'>
-          <h2 className='text-center font-semibold pt-2'>What we do</h2>
-          <p className='text-center font-bold'>We deliver the following solutions</p>
-          <div className='flex flex-col md:flex-row gap-4 p-2'>
-            <div className='shadow-2xl rounded-md p-4'>
-              <h1 className='font-bold text-center'>Interior Lighting & Decor</h1>
-              <p>Marble painting</p>
-              <p>Gypsum lighting</p>
+    <div className='flex flex-col min-h-screen'>
+      <Navbar />
+      <div className='flex-grow bg-gray-100'>
+        <div className='text-center pt-10 max-w-2xl mx-auto'>
+          <h1 className='text-4xl font-bold mb-4'>Transform Your Space with Daniel Interior Designs</h1>
+          <p className='text-md mb-6'>We believe in creating spaces that inspire and elevate your everyday life. We work closely with you to bring your vision to life, combining functionality with aesthetic appeal.</p>
+          <div className='flex flex-col md:flex-row justify-center mt-8 space-y-4 md:space-y-0 md:space-x-4'>
+              <button
+              className='bg-black text-white p-3 rounded-2xl'
+              >
+                <a href='/about'>
+                <span>Who we are</span>
+                <span className='text-yellow-400 mx-2 text-xl'>→</span>
+                </a>
+              </button>
+              <button
+              className='border border-yellow-400 text-black p-3 rounded-2xl'>
+                <span>Watch video</span>
+                <span className='text-black-400 mx-2 text-xl'>→</span>
+              </button>
             </div>
-            <div className='shadow-2xl rounded p-4'>
-              <h1 className='text-center font-bold'>Kitchen and space optimization</h1>
-              <p>Modern kitchen design</p>
-              <p>space planning</p>
-            </div>
-            <div className='shadow-2xl rounded p-4'>
-              <h1 className='text-center font-bold'>Painting and Flooring</h1>
-              <p>Painting decos</p>
-              <p>Flooring Epoxy Decos</p>
-            </div>
-            <div className='shadow-2xl rounded p-4'>
-              <h1 className='text-center font-bold'>Project Execution</h1>
-              <p>We do manage projects</p>
-              <p>Furniture speciality</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
