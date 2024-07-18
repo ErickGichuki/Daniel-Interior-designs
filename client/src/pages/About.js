@@ -7,31 +7,26 @@ function About() {
       <Navbar/>
       <div className=''>
         <h2 className='text-center'>Welcome to Daniel Interior Designs</h2>
-        <h3 className=''>Have you heard about us already?</h3>
-        <p>Learn more about us today</p>
+        <h3 className=''>Who we are</h3>
       </div>
       <div className='flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 justify-center items-center m-8'>
-        <div className='bg-gradient-to-r from-yellow-200 via-blue-500 to-green-400 shadow-lg w-full text-center md:w-1/3 p-10 rounded-lg'>
+        <div className='bg-indigo-100 hover:bg-purple-200 shadow-lg w-full text-center md:w-1/3 p-10 rounded-lg transition duration-300 ease-in-out transform:hover-translate-y-1 hover:scale-105'>
           <h2 className='text-xl'>Mission</h2>
-          <p>Design your lifestyle</p>
+          <p>Design your lifestyle to the max</p>
         </div>
-        <div className='shadow-lg w-full text-center md:w-1/3 p-10 rounded-lg'>
+        <div className='bg-violet-300 hover:bg-purple-200 shadow-lg w-full text-center md:w-1/3 p-10 rounded-lg transition duration-300 ease-in-out transform:hover-translate-y-1 hover:scale-105'>
           <h2 className='text-xl'>Vision</h2>
           <p>Turning dreams to reality</p>
         </div>
-        <div className='shadow-lg w-full text-center md:w-1/3 p-10 rounded-lg'>
+        <div className='bg-green-100 hover:bg-purple-200 shadow-lg w-full text-center md:w-1/3 p-10 rounded-lg transition duration-300 ease-in-out transform:hover-translate-y-1 hover:scale-105'>
           <h2 className='text-xl'>Goals</h2>
           <p>To make our clients happy</p>
         </div>
       </div>
-      <div className=''>
-          <h2 className='text-center text-lg'>Testimonials</h2>
-          <p>Read what our client say about us</p>
-          <div className='border shadow-lg text-center rounded-md'>
-            <h2 className='text-lg'>Erick</h2>
-            <p className='text-md'>I have experienced the best solutions from Daniel Interior Design. Highly recommend</p>
-          </div>
-      </div>
+      <div>
+          <h2 className='text-center text-lg font-bold'>Area of operation</h2>
+          <p>We are located in Kisumu Kenya</p>
+        </div>
     </div>
   )
 }

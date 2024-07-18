@@ -5,9 +5,11 @@ function Services() {
   return (
     <div>
       <Navbar/>
-      <div>
+      <div className='p-3'>
         <h2>We offer the following services</h2>
-        
+        <div className='shadow-lg'>
+          <h2>marble painting</h2>
+        </div>
       </div>
     </div>
   )
