@@ -31,11 +31,13 @@ function Footer() {
       </div>
       <div className='text-white'>
         <h>Reach us via</h>
-        <div className='flex flex-col md:flex-row py-2 pt-3 justify-between'>
-        <input
+        <div className='pt-3'>
+         <form className=' flex flex-col md:flex-row py-2 justify-between'>
+         <input
             type='text'
+            name='email'
             placeholder='email us'
-            className='py-3 rounded-lg text-center '
+            className='py-3 rounded-lg text-center mr-3'
             />
              <button
             type='submit'
@@ -43,6 +45,7 @@ function Footer() {
             >
                 SUBMIT
             </button>
+         </form>
         </div>
         <div className='flex flex-row space-x-7'>
         <FontAwesomeIcon icon={faPhone} className='rounded-3xl bg-green-600 py-2 px-2'/>
