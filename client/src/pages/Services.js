@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function Services() {
   return (
@@ -11,6 +12,7 @@ function Services() {
           <h2>marble painting</h2>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

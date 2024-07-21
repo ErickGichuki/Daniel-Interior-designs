@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBinoculars, faFlag,faCrosshairs} from '@fortawesome/free-solid-svg-icons'
 
@@ -54,6 +55,7 @@ function About() {
       <div className='bg-gradient-to-r from-gray-400 via-indigo to-gray-100 text-gray-800 text-center p-4 font-bold text-lg'>
           <p>We operate from Kisumu, Kenya, we proudly serve clients locally and beyond, bringing ur passion for design to homes and businesses alike.</p>
       </div>
+      <Footer/>
     </div>
   )
 }

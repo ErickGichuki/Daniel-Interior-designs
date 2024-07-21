@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function Contact() {
   return (
@@ -74,6 +75,7 @@ function Contact() {
           <li>Email</li>
         </ul>
       </div>
+      <Footer/>
     </div>
   )
 }
