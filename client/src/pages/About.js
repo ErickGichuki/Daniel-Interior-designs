@@ -9,9 +9,9 @@ function About() {
       <Navbar/>
       <div className='relative'>
         <h2 className='text-center text-lg font-bold'>About Daniel Interior Designs</h2>
-        <h3 className='font-bold text-lg'>Who we are</h3>
-        <p>Daniel interior designs is a provider of design solutions</p>
-        <p>We believe that your home or office should reflect your personal style and preferences. </p>
+        <h3 className='font-bold text-lg text-center'>Who we are</h3>
+        <p className='text-center'>Daniel interior designs is a provider of design solutions</p>
+        <p className='text-center'>We believe that your home or office should reflect your personal style and preferences. </p>
       </div>
 
       <div className='flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0 justify-center items-center py-8 mx-20'>
