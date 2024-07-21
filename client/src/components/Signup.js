@@ -63,8 +63,8 @@ function Signup() {
       });
       
   return (
-    <div className='min-h-screen flex items-center justify-center bg-gradient-to-r from-green-600 via-yellow-600 to-red-600'>
-        <div className='md:w-2/3 bg-black p-4 m-10 rounded-3xl'>
+    <div className='min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-green-600 via-yellow-600 to-red-600'>
+        <div className='md:w-1/2 lg: bg-black p-4 m-10 rounded-3xl'>
             <h2 className='text-white text-4xl font-bold mb-4'>Transform your space with us</h2>
             <p className='text-white mb-6'>Wondering where to find a company that designs your dream interior solutions?</p>
             <p className='text-white mb-4'>Worry no more we are here to deliver the best solution</p>
@@ -72,7 +72,7 @@ function Signup() {
               <img src='/tony.png' alt='tony' className='w-40 border rounded-2xl pulse'/>
             </div>
         </div>
-        <div className='md:w-1/3 p-14 border bg-white mr-4 rounded-lg'>
+        <div className='md:w-1/3 p-14 border bg-white mr-4 rounded-lg mb-4 mx-5'>
             <h3 className='text-2xl font-bold mb-4'>Welcome to Daniel Interior Designs</h3>
             <form onSubmit={formik.handleSubmit}>
               <div className='mb-4'>
