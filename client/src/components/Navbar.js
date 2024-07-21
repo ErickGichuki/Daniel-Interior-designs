@@ -15,11 +15,11 @@ function Navbar() {
           </div>
           <p className='ml-3 text-lg font-semibold'>Daniel Interior Designs</p>
           <div className='hidden md:flex space-x-6 ml-auto'>
-            <NavLink to='/home' className='hover:text-green-500' activeClassName='text-green-400'>Home</NavLink>
-            <NavLink to='/about' className='hover:text-green-500' activeClassName='text-green-400'>About</NavLink>
-            <NavLink to='/services' className='hover:text-green-500 ' activeClassName='text-green-400'>Services</NavLink>
-            <NavLink to='/contact' className='hover:text-green-500' activeClassName='text-green-400'>Contact us</NavLink>
-            <NavLink to='/' className='hover:text-green-500' activeClassName='text-green-400'>Logout</NavLink>
+            <NavLink to='/home' className='hover:text-green-500' >Home</NavLink>
+            <NavLink to='/about' className='hover:text-green-500' >About</NavLink>
+            <NavLink to='/services' className='hover:text-green-500 ' >Services</NavLink>
+            <NavLink to='/contact' className='hover:text-green-500' >Contact us</NavLink>
+            <NavLink to='/' className='hover:text-green-500' >Logout</NavLink>
           </div>
           <button
           className='md:hidden flex items-center px-3 py-2 border rounded text-white border-white'
@@ -35,11 +35,11 @@ function Navbar() {
 
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
-          <NavLink to='/home' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' activeClassName='bg-green-700 text-white'>Home</NavLink>
-          <NavLink to='/about' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' activeClassName='bg-green-700 text-white'>About</NavLink>
-          <NavLink to='/services' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' activeClassName='bg-green-700 text-white'>Services</NavLink>
-          <NavLink to='/contact' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' activeClassName='bg-green-700 text-white'>Contact Us</NavLink>
-          <NavLink to='/' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' activeClassName='bg-green-700 text-white'>Logout</NavLink>
+          <NavLink to='/home' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' >Home</NavLink>
+          <NavLink to='/about' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' >About</NavLink>
+          <NavLink to='/services' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' >Services</NavLink>
+          <NavLink to='/contact' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white' >Contact Us</NavLink>
+          <NavLink to='/' className='block px-3 py-2 text-base font-medium text-white hover:bg-green-700 hover:text-white'>Logout</NavLink>
         </div>
       </div>
     </nav>

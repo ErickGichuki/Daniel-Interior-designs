@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faInstagram, faWhatsapp, faTwitter, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faInstagram, faWhatsapp, faXTwitter, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
   return (
@@ -50,8 +50,8 @@ function Footer() {
          </form>
         </div>
         <div className='flex flex-wrap gap-4 justify-center'>
-        <FontAwesomeIcon icon={faFacebookF} className='rounded-full bg-green-600 p-3'/>
-        <FontAwesomeIcon icon={faTwitter} className='rounded-full bg-blue-400 p-3'/>
+        <FontAwesomeIcon icon={faFacebook} className='rounded-full bg-blue-500 p-3'/>
+        <FontAwesomeIcon icon={faXTwitter} className='rounded-full bg-black p-3'/>
         <FontAwesomeIcon icon={faInstagram} className='rounded-full bg-pink-600 p-3'/>
         <FontAwesomeIcon icon={faWhatsapp} className='rounded-full bg-green-600 p-3'/>
         <FontAwesomeIcon icon={faLinkedin} className='rounded-full bg-blue-700 p-3'/>
