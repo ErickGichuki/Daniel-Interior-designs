@@ -8,9 +8,9 @@ function Navbar() {
     <nav className='p-4 bg-dark-blue text-white'>
       <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between'>
-          <div className='flex items-center'>
+          <div className='flex items-center space-x-4'>
             <Link to='/home' aria-label='Home'>
-              <img src='/Daniel.png' alt='Dan logo' className='w-16 rounded-3xl'/>
+              <img src='/Daniel.png' alt='Daniel logo' className='w-14 h-14 rounded-full object-cover'/>
             </Link>
           </div>
           <p className='ml-3 text-lg font-semibold'>Daniel Interior Designs</p>
