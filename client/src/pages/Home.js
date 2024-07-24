@@ -10,14 +10,14 @@ function Home() {
       <Navbar />
       <div className='relative bg-gray-200 p-10'
       style={{
-        backgroundImage:'url(https://media.istockphoto.com/id/1471308768/photo/scandinavian-living-room-with-gray-armchair-on-empty-white-wall-background.webp?b=1&s=170667a&w=0&k=20&c=wnqCrLMZNdygyNHMVs85yWeOjD-YTDezA7vhQBQASZI=)',
+        backgroundImage:'url(https://images.unsplash.com/photo-1481277542470-605612bd2d61?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3RyaW5ncyUyMGludGVyaW9yJTIwZGVzaWduc3xlbnwwfHwwfHx8MA%3D%3D)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
         <div className='text-center pt-10 max-w-2xl mx-auto mb-4 py-20'>
           <h1 className='text-4xl font-bold mb-4'>Transform Your Space with Daniel Interior Designs</h1>
           <p className='text-lg mb-6'>We believe in creating spaces that inspire and elevate your everyday life. We work closely with you to bring your vision to life, combining functionality with aesthetic appeal.</p>
-            <div className='flex flex-col md:flex-row justify-center mt-8 space-y-4 md:space-y-0 md:space-x-4 mx-4'>
+            <div className='flex flex-col md:flex-row justify-center mt-12 space-y-4 md:space-y-0 md:space-x-4 mx-4'>
               <button
               className='bg-black text-white p-3 rounded-2xl hover:bg-indigo-400 hover:text-black'
               >
@@ -33,42 +33,42 @@ function Home() {
             </div>
         </div>
       </div>
-      <div className='bg-gray-100 pt-12 justify-center pb-8'>
+      <div className='bg-gray-200 pt-12 justify-center pb-8'>
         <div className='text-center mb-8'>
-          <h2 className='text-3xl mb-4 font-bold'>Our Services</h2>
+          <h2 className='text-3xl mb-4 font-bold'>Solutions we Offer</h2>
           <p className='text-lg'>We transform your space with our expert services: luxurious marble painting, custom furniture design, tailored lighting solutions, efficient space optimization, and personalized enterior design consultations</p>
       </div>
       <div className='container mx-auto px-4 py-8'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
           <div className='p-6 bg-white'>
             <FontAwesomeIcon icon={faPaintBrush} className='text-4xl text-blue-600 mb-2'/>
-            <h3 className='text-xl font-semibold'>Marble Painting</h3>
-            <p className='text-md'>luxurious finishes enhances your space's appeal.</p>
+            <h3 className='text-xl font-semibold mb-2'>Marble Painting</h3>
+            <p className='text-md'>Transform your space with luxurious marble painting, enhancing its appeal with sophisticated finishes and adding a touch of elegance to any room.</p>
           </div>
           <div className='p-6 bg-white'>
             <FontAwesomeIcon icon={faCouch} className='text-4xl text-green-600 mb-2'/>
-            <h2 className='text-xl font-semibold'>Custom furniture design</h2>
-            <p className='text-md'>Tailored designs for perfect functionality and style.</p>
+            <h2 className='text-xl font-semibold mb-2'>Custom furniture design</h2>
+            <p className='text-md'>Create bespoke furniture tailored to your needs, combining perfect functionality with stylish design to complement your space and enhance its overall aesthetic.</p>
           </div>
           <div className='p-6 bg-white'>
             <FontAwesomeIcon icon={faLightbulb} className='text-4xl text-yellow-500 mb-2'/>
-            <h2 className='text-xl font-semibold'>Lighting Solutions</h2>
-            <p className='text-md'>Create the perfect ambiance with our lighting options.</p>
+            <h2 className='text-xl font-semibold mb-2'>Lighting Solutions</h2>
+            <p className='text-md'>Design the ideal lighting setup for your space, crafting the perfect ambiance with tailored solutions that enhance both functionality and mood.</p>
           </div>
           <div className='p-6 bg-white'>
             <FontAwesomeIcon icon={faRuler} className='text-4xl text-red-600 mb-2'/>
-            <h2 className='text-xl font-semibold'>Space Optimization</h2>
-            <p className='text-md'>Maximize functionality and aesthetics of your space.</p>
+            <h2 className='text-xl font-semibold mb-2'>Space Optimization</h2>
+            <p className='text-md'>Maximize your space's efficiency and visual appeal with expert optimization strategies, ensuring every inch is utilised effectively while maintaining a stylish and functional layout.</p>
           </div>
           <div className='p-6 bg-white'>
             <FontAwesomeIcon icon={faComment} className='text-4xl text-purple-600 mb-2'/>
-            <h2 className='text-xl font-semibold'>Design Consultation</h2>
-            <p className='text-md'>Personalized advice to achieve your ideal interior.</p>
+            <h2 className='text-xl font-semibold mb-2'>Design Consultation</h2>
+            <p className='text-md'>Receive personalized design advice to achieve your dream interior, with professional insights that help you create a space that reflects your style and meets your needs.</p>
           </div>
           <div className='p-6 bg-white'>
             <FontAwesomeIcon icon={faPalette} className='text-4xl text-teal-600 mb-2'/>
-            <h2 className='text-xl font-semibold'>Color Palette Consulting</h2>
-            <p className='text-md'>Expert advice to choose the perfect color scheme for your space.</p>
+            <h2 className='text-xl font-semibold mb-2'>Color Palette Consulting</h2>
+            <p className='text-md'>Get expert guidance on selecting the perfect color scheme for your space, enhancing its atmosphere and visual appeal with carefully chosen hues and combinations.</p>
           </div>
         </div>
       </div>
@@ -97,9 +97,9 @@ function Home() {
             </div>
             <div className='md:w-1/2'>
               <img
-              src='https://media.istockphoto.com/id/1500250958/photo/mockup-poster-frame-on-the-wall-of-living-room-luxurious-apartment-background-with.webp?b=1&s=170667a&w=0&k=20&c=ElwoK017ikvoMA8RYNA4lejhsPbDF4LC8qbj88xhM_A='
+              src='./background.png'
               alt='why us'
-              className='w-full h-auto rounded-full'
+              className='w-64 h-64 rounded-full'
               />
             </div>
           </div>
