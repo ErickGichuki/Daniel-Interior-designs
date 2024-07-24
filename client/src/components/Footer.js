@@ -9,7 +9,7 @@ function Footer() {
      <div className='container mx-auto px-4 py-8'>
      <div className='flex flex-col md:flex-row justify-between'>
       <div className='text-white mb-4 md:mb-0 md:w-1/3'>
-        <h2 className='text-xl font-semibold mb-2'>Connect</h2>
+        <h2 className='text-xl font-semibold mb-2'>Talk with us today</h2>
         <p className='mb-4'>
           Let's connect on social media platforms for insights, latest news and engaging discussions.
         </p>
