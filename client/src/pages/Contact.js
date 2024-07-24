@@ -4,22 +4,15 @@ import Footer from '../components/Footer'
 
 function Contact() {
   return (
-    <div>
+    <div className='bg-gray-400'>
       <Navbar/>
-      <div className='relative'>
-        <img
-        src='Daniel.png'
-        alt=''
-        className='w-full h-64 object-cover'
-        />
-      </div>
-      <div className='bg-green-500 flex flex-col p-12 md:flex-row justify-between items-center'>
+      <div className='bg-gray-100 flex flex-col p-12 md:flex-row justify-between items-center'>
         <div className='md:w-1/2 mb-8 md:mb-0'>
-          <h2 className='text-2xl font-bold mb-4'>Ready to transform your interiors? Contact us today to schedule consultation nd let us illuminate your space with our expert design services.</h2>
-          <p className='text-xl mb-6'>Get in touch</p>
+          <h2 className='text-xl font-bold mb-4 text-gray-800'>Ready to transform your interiors? Contact us today to schedule consultation nd let us illuminate your space with our expert design services.</h2>
+          <p className='text-xl font-semibold mb-6 text-gray-700'>Don't hesitate book with us today</p>
         </div>
 
-      <form className='p-6 bg-dark-blue rounded-lg shadow-md md:w-1/2'>
+      <form className='p-6 bg-white rounded-lg shadow-md md:w-1/2'>
         <div className='mb-4'>
           <textarea
           className='w-full px-3 py-2 text-gray-800 border rounded-lg focus:outline-none focus:shadow-outline'

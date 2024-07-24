@@ -34,10 +34,10 @@ function Footer() {
       <div className='text-white mb-8 md:mb-0'>
         <h2 className='font-bold text-lg mb-4'>Useful Links</h2>
          <ul className='list-none space-y-3'>
-            <li><a href='/home' className='hover:text-underline'>Home</a></li>
-            <li><a href='/services' className='hover:text-underline'>Services</a></li>
-            <li><a href='/about' className='hover:text-underline'>About</a></li>
-            <li><a href='/contact' className='hover:text-underline'>Contact Us</a></li>
+            <li><a href='/home' className='hover:text-green-500'>Home</a></li>
+            <li><a href='/services' className='hover:text-green-500'>Services</a></li>
+            <li><a href='/about' className='hover:text-green-500'>About</a></li>
+            <li><a href='/contact' className='hover:text-green-500'>Contact Us</a></li>
          </ul>
       </div>
      
