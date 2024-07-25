@@ -59,3 +59,16 @@ class Service(db.Model, SerializerMixin):
     def __repr__(self):
         return f'Service {self.name} will cost you {self.price}'
     
+class Contact(db.Model, SerializerMixin):
+    __tablename__ = 'contacts'
+    id = db.Column(db.Integer, primary_key=True)
+    message = db.Column(db.String, nullable=False)
+    name = db.Column(db.String, nullable=False)
+    email = db.Column(db.String, nullable=False)
+    phone = db.Column(db.String, nullable=False)
+    project = db.Column(db.String, nullable=False)
+    user_contact = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+
+    def __repr__(self):
+        return f'Contact {self.message} {self.project}'
+    

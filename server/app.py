@@ -1,5 +1,5 @@
 from config import *
-from models import User, Service
+from models import User, Service, Contact
 
 @app.route('/')
 def index():
@@ -45,6 +45,21 @@ def service():
     db.session.commit()
 
     return make_response(jsonify({'message': 'service created successfully'}), 201)
+
+@app.route('/contact', methods=['POST'])
+def contact():
+    data = request.get_json()
+
+    contact = Contact(
+        message = data['message'],
+        name = data['name'],
+        email = data['email'],
+        phone = data['phone'],
+        project = data['project']
+    )
+    db.session.add(contact)
+    db.session.commit()
+    return make_response(jsonify({'message': "Thank you for contacting Daniel Interiors your message is being looked upon."}))
 
 @app.route('/service/<int:id>', methods=['DELETE'])
 def delete_service(id):
