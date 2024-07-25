@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaintBrush, faCouch, faLightbulb, faRuler, faComment, faPalette, faCheck, faUser, faStar, faUserLarge } from '@fortawesome/free-solid-svg-icons'
+import { faPaintBrush, faCouch, faLightbulb, faExpandArrowsAlt, faComment, faPalette, faCheck, faUser, faStar, faUserLarge } from '@fortawesome/free-solid-svg-icons'
 
 function Home() {
   return (
@@ -36,37 +36,37 @@ function Home() {
       <div className='bg-gray-200 pt-12 justify-center pb-8'>
         <div className='text-center mb-8'>
           <h2 className='text-3xl mb-4 font-bold'>Solutions we Offer</h2>
-          <p className='text-lg'>We transform your space with our expert services: luxurious marble painting, custom furniture design, tailored lighting solutions, efficient space optimization, and personalized enterior design consultations</p>
+          <p className='text-lg'>We transform your space with our expert services: </p>
       </div>
       <div className='container mx-auto px-4 py-8'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
-          <div className='p-6 bg-white'>
-            <FontAwesomeIcon icon={faPaintBrush} className='text-4xl text-blue-600 mb-2'/>
+          <div className='p-6 bg-white hover-move-icon'>
+            <FontAwesomeIcon icon={faPaintBrush} className='text-4xl text-blue-600 mb-2 icon'/>
             <h3 className='text-xl font-semibold mb-2'>Marble Painting</h3>
             <p className='text-md'>Transform your space with luxurious marble painting, enhancing its appeal with sophisticated finishes and adding a touch of elegance to any room.</p>
           </div>
-          <div className='p-6 bg-white'>
-            <FontAwesomeIcon icon={faCouch} className='text-4xl text-green-600 mb-2'/>
+          <div className='p-6 bg-white hover-move-icon'>
+            <FontAwesomeIcon icon={faCouch} className='text-4xl text-green-600 mb-2 icon'/>
             <h2 className='text-xl font-semibold mb-2'>Custom furniture design</h2>
             <p className='text-md'>Create bespoke furniture tailored to your needs, combining perfect functionality with stylish design to complement your space and enhance its overall aesthetic.</p>
           </div>
-          <div className='p-6 bg-white'>
-            <FontAwesomeIcon icon={faLightbulb} className='text-4xl text-yellow-500 mb-2'/>
+          <div className='p-6 bg-white hover-move-icon'>
+            <FontAwesomeIcon icon={faLightbulb} className='text-4xl text-yellow-500 mb-2 icon'/>
             <h2 className='text-xl font-semibold mb-2'>Lighting Solutions</h2>
             <p className='text-md'>Design the ideal lighting setup for your space, crafting the perfect ambiance with tailored solutions that enhance both functionality and mood.</p>
           </div>
-          <div className='p-6 bg-white'>
-            <FontAwesomeIcon icon={faRuler} className='text-4xl text-red-600 mb-2'/>
+          <div className='p-6 bg-white hover-move-icon'>
+            <FontAwesomeIcon icon={faExpandArrowsAlt} className='text-4xl text-red-600 mb-2 icon'/>
             <h2 className='text-xl font-semibold mb-2'>Space Optimization</h2>
             <p className='text-md'>Maximize your space's efficiency and visual appeal with expert optimization strategies, ensuring every inch is utilised effectively while maintaining a stylish and functional layout.</p>
           </div>
-          <div className='p-6 bg-white'>
-            <FontAwesomeIcon icon={faComment} className='text-4xl text-purple-600 mb-2'/>
+          <div className='p-6 bg-white hover-move-icon'>
+            <FontAwesomeIcon icon={faComment} className='text-4xl text-purple-600 mb-2 icon'/>
             <h2 className='text-xl font-semibold mb-2'>Design Consultation</h2>
             <p className='text-md'>Receive personalized design advice to achieve your dream interior, with professional insights that help you create a space that reflects your style and meets your needs.</p>
           </div>
-          <div className='p-6 bg-white'>
-            <FontAwesomeIcon icon={faPalette} className='text-4xl text-teal-600 mb-2'/>
+          <div className='p-6 bg-white hover-move-icon'>
+            <FontAwesomeIcon icon={faPalette} className='text-4xl text-teal-600 mb-2 icon'/>
             <h2 className='text-xl font-semibold mb-2'>Color Palette Consulting</h2>
             <p className='text-md'>Get expert guidance on selecting the perfect color scheme for your space, enhancing its atmosphere and visual appeal with carefully chosen hues and combinations.</p>
           </div>
@@ -108,13 +108,13 @@ function Home() {
       <div className='py-12 bg-gray-100 px-4 md:px-8'>
         <div className='text-center mx-4 md:mx-0 py-8'>
           <h2 className='text-3xl font-bold text-gray-800 mb-4'>Testimonials</h2>
-          <p className='text-lg text-gray-600 mb-8'>Get to hear what our customers say about the transformative impact of our interior design solutions firsthand.</p>
+          <p className='text-lg text-gray-600 mb-8'>Reviews from our customers concerning the transformative impact of our interior design solutions.</p>
         </div>
         <div className='flex flex-col md:flex-row gap-8 mt-8'>
           <div className='shadow-2xl bg-white py-6 px-6 rounded-lg flex-1'>
             <div className='flex items-center space-x-3 pb-4 border-b border-gray-200'>
               <FontAwesomeIcon icon={faUser} className='text-3xl text-blue-600 border rounded-full p-2'/>
-              <h2 className='text-xl text-gray-800 font-bold'>Sarah G.</h2>
+              <h2 className='text-xl text-gray-800 font-bold'>Kennedy A.</h2>
             </div>
             <p className='text-md mt-4 text-gray-700'>"Working with Daniel Interior was a fantastic experience. They listened to our needs and delivered a beuatiful, functional space that we love spending time in."</p>
             <div className='flex mt-4'>
@@ -127,7 +127,7 @@ function Home() {
           <div className='shadow-2xl bg-white py-6 px-6 rounded-lg flex-1'>
             <div className='flex items-center space-x-3 pb-4 border-b border-gray-200'>
               <FontAwesomeIcon icon={faUserLarge} className='text-3xl text-blue-600 border rounded-full p-2'/>
-              <h2 className='text-xl text-gray-800 font-bold'>Erick G.</h2>
+              <h2 className='text-xl text-gray-800 font-bold'>Lucky A.</h2>
             </div>
             <p className='text-md mt-4 text-gray-700'>"From concept to completion, the team was exceptional. Their innovative ideas and flawless execution transformed our office into a stunning workspace."</p>
             <div className='flex mt-4'>
@@ -140,7 +140,7 @@ function Home() {
           <div className='shadow-2xl bg-white py-6 px-6 rounded-lg flex-1'>
             <div className='flex items-center space-x-3 pb-4 border-b border-gray-200'>
               <FontAwesomeIcon icon={faUser} className='text-3xl text-blue-600 border rounded-full p-2'/>
-              <h2 className='text-xl text-gray-800 font-bold'>Mucheru.S <span className='text-lg font-semibold'></span></h2>
+              <h2 className='text-xl text-gray-800 font-bold'>Hezron.O <span className='text-lg font-semibold'></span></h2>
             </div>
             <p className='text-md mt-4 text-gray-700'>"Daniel Interior Designs completely revitalized our home. Their attention to detail and creative solutions exceeded our expectations. We couldn't be happier with our results!"</p>
             <div className='flex mt-4'>

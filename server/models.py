@@ -67,7 +67,6 @@ class Contact(db.Model, SerializerMixin):
     email = db.Column(db.String, nullable=False)
     phone = db.Column(db.String, nullable=False)
     project = db.Column(db.String, nullable=False)
-    user_contact = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
     def __repr__(self):
         return f'Contact {self.message} {self.project}'

@@ -10,9 +10,22 @@ module.exports = {
         'skyblue':'#84fa0',
         'lightLavender':'#a18cd1',
         'pastelPink':'#fbc2eb',
-      }
+      },
+      keyframes: {
+        move: {
+          "0%, 100%": { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+      },
+      animation: {
+        move: 'move 0.3s ease-in-out',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      animation: ['hover'],
     },
   },
   plugins: [],
 }
-
