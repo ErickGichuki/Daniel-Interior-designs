@@ -68,6 +68,15 @@ class Contact(db.Model, SerializerMixin):
     phone = db.Column(db.String, nullable=False)
     project = db.Column(db.String, nullable=False)
 
+    @validates('email')
+    def validate_email(self, key, address):
+        if '@' not in address:
+            raise ValueError('Failed to validate the email')
+        return address
+    
+    def __repr__(self):
+        return f'<User {self.name} with {self.username}>'
+    
     def __repr__(self):
         return f'Contact {self.message} {self.project}'
     

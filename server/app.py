@@ -68,6 +68,13 @@ def delete_service(id):
     db.session.commit()
     return make_response(jsonify({'message': 'service deleted successfully'}), 200)
 
+@app.route('/contact/<int:id>', methods=['DELETE'])
+def contact_deletion(id):
+    contact = Contact.query.filter(Contact.id==id).first()
+    db.session.delete(contact)
+    db.session.commit()
+    return make_response(jsonify({'message': 'contact information deleted'}))
+
 @app.route('/service', methods=['GET'])
 def get_service():
     services = Service.query.all()
