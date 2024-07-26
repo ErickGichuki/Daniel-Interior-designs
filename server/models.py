@@ -73,9 +73,7 @@ class Contact(db.Model, SerializerMixin):
         if '@' not in address:
             raise ValueError('Failed to validate the email')
         return address
-    
-    def __repr__(self):
-        return f'<User {self.name} with {self.username}>'
+
     
     def __repr__(self):
         return f'Contact {self.message} {self.project}'

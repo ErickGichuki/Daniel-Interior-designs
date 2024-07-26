@@ -1,8 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import axios from 'axios'
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    message: '',
+    name: '',
+    email: '',
+    phone: '',
+    project: '',
+  });
+
+  const [responseMessage, setResponseMessage] = useState('');
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await axios.post('/contact', formData);
+      if ( response.status === 201){
+        setResponseMessage('Your message has been sent and will be looked at quickly.')
+      } else {
+        setResponseMessage('Something went wrong. Please try again.')
+      }
+      setFormData({
+        message:'',
+        name: '',
+        email: '',
+        phone: '',
+        project: '',
+      });
+    } catch (error) {
+      setResponseMessage('It is required you fill the spaces.');
+    }
+  };
+
   return (
     <div className='bg-gray-400'>
       <Navbar/>
@@ -12,18 +53,22 @@ function Contact() {
           <p className='text-xl font-semibold mb-6 text-gray-700'>Don't hesitate book with us today</p>
         </div>
 
-      <form className='p-6 bg-white rounded-lg shadow-md md:w-1/2'>
+      <form onSubmit={handleSubmit} className='p-6 bg-white rounded-lg shadow-md md:w-1/2'>
         <div className='mb-4'>
           <textarea
           className='w-full px-3 py-2 text-gray-800 border rounded-lg focus:outline-none focus:shadow-outline'
           rows='4'
-          id='message'
+          name='message'
+          value={formData.message}
+          onChange={handleChange}
           placeholder='Message'
           ></textarea>
         </div>
         <div className='mb-4'>
           <input 
           name='name'
+          value={formData.name}
+          onChange={handleChange}
           placeholder='Enter your name'
           className='w-full px-3 py-2 text-gray-800 border rounded-lg focus:outline-none focus:shadow-outline'
           />
@@ -31,6 +76,8 @@ function Contact() {
         <div className='mb-4'>
           <input 
           name='email'
+          value={formData.email}
+          onChange={handleChange}
           placeholder='Enter your email'
           className='w-full px-3 py-2 text-gray-800 border rounded-lg focus:outline-none focus:shadow-outline'
           />
@@ -38,13 +85,17 @@ function Contact() {
         <div className='mb-4'>
           <input 
           name='phone'
+          value={formData.phone}
+          onChange={handleChange}
           placeholder='Enter your phone'
           className='w-full px-3 py-2 text-gray-800 border rounded-lg focus:outline-none focus:shadow-outline'
           />
         </div>
         <div className='mb-4'>
           <input 
-          name='text'
+          name='project'
+          value={formData.project}
+          onChange={handleChange}
           placeholder='Enter your project'
           className='w-full px-3 py-2 text-gray-800 border rounded-lg focus:outline-none focus:shadow-outline'
           />
@@ -56,6 +107,13 @@ function Contact() {
             SUBMIT
           </button>
         </div>
+        {
+          responseMessage && (
+            <div className='text-center'>
+              {responseMessage}
+            </div>
+          )
+        }
       </form>
       </div>
       <Footer/>
