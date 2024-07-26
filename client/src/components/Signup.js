@@ -4,6 +4,7 @@ import {useFormik} from 'formik';
 import axios from 'axios';
 import sha1 from 'sha1';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 async function isPasswordPwned(password){
     const hash = sha1(password);
@@ -19,6 +20,7 @@ async function isPasswordPwned(password){
 function Signup() {
     const [error, setError] = useState(null)
     const [message, setMessage] = useState(null)
+    const nav = useNavigate()
 
     const formik = useFormik({
         initialValues: {
@@ -56,10 +58,12 @@ function Signup() {
                         setMessage(null);
                     }, 2900);
                 }
+                nav('/login')
             } catch (error) {
                 setError('An error occured during signup.Please try again')
             }
         } 
+        
       });
       
   return (
@@ -68,7 +72,7 @@ function Signup() {
             <h2 className='text-white text-4xl font-bold mb-4'>Transform your space with us</h2>
             <p className='text-white mb-6'>Wondering where to find a company that designs your dream interior solutions?</p>
             <p className='text-white mb-4'>Worry no more we are here to deliver the best solution</p>
-            <div className='flex justify-end'>
+            <div className='flex justify-center'>
               <img src='/tony.png' alt='tony' className='w-40 border rounded-2xl pulse'/>
             </div>
         </div>
