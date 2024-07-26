@@ -81,6 +81,5 @@ def get_service():
     service_list = [service.to_dict() for service in services]
     return make_response(jsonify(service_list), 200)
 
-
 if __name__ == '__main__':
     app.run(debug=True)

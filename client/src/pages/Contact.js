@@ -28,8 +28,11 @@ function Contact() {
     try {
       const response = await axios.post('/contact', formData);
       if ( response.status === 201){
-        setResponseMessage('Your message has been sent and will be looked at quickly.')
-      } else {
+        setResponseMessage('Your message has been sent and will be looked at quickly.');
+        setTimeout(() => {
+          setResponseMessage(null);
+        }, 10000)
+      } else{
         setResponseMessage('Something went wrong. Please try again.')
       }
       setFormData({
@@ -41,6 +44,9 @@ function Contact() {
       });
     } catch (error) {
       setResponseMessage('It is required you fill the spaces.');
+      setTimeout(() =>{
+        setResponseMessage(null)
+      }, 1500)
     }
   };
 
@@ -109,7 +115,7 @@ function Contact() {
         </div>
         {
           responseMessage && (
-            <div className='text-center'>
+            <div className='mt-4 text-center'>
               {responseMessage}
             </div>
           )
