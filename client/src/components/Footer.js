@@ -14,10 +14,10 @@ function Footer() {
           Let's connect on social media platforms for insights, latest news and engaging discussions.
         </p>
         <div className='flex space-x-4'>
-          <a href='#' className='hover:opacity-75'>
+          <a href='https://www.instagram.com/danielinteriors254?igsh=YzljYTk1ODg3Zg==' className='hover:opacity-75'>
             <FontAwesomeIcon icon={faFacebook} className='rounded-full bg-blue-500 p-3 text-white'/>
           </a>
-          <a href='#' className='hover:opacity-75'>
+          <a href='https://wa.me/message/5ASRCZOLWA2NP1' className='hover:opacity-75'>
             <FontAwesomeIcon icon={faXTwitter} className='rounded-full bg-black p-3 text-white'/>
           </a>
           <a href=' https://www.instagram.com/danielinteriors254?igsh=YzljYTk1ODg3Zg==' className='hover:opacity-75'>
