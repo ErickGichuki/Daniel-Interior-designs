@@ -4,9 +4,11 @@ import {useNavigate} from 'react-router-dom';
 import {useFormik} from 'formik';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import {FaEye, FaEyeSlash} from 'react-icons/fa'
 
 function Login() {
     const navigate = useNavigate()
+    const [showPassword, setShowPassword] = useState(false);
     const [message, setMessage] = useState(null)
 
 
@@ -37,6 +39,9 @@ function Login() {
             }
         }
     });
+    const toggleShowPassword = () => {
+      setShowPassword(prevState => !prevState);
+    };
 
   return (
     <div className='min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-green-600 via-yellow-600 to-red-600'>
@@ -72,16 +77,24 @@ function Login() {
                 />
                 {formik.touched.email && formik.errors.email && <p className='text-red-500'>{formik.errors.email}</p>}
                 </div>
-              <div className='mb-4'>
+              <div className='mb-4 relative'>
                 <input 
                 className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
-                type='password' 
+                type={showPassword ? 'text' : 'password'}
                 name = 'password'
                 placeholder='Enter your password'
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.password}
                 />
+                <button
+                type='button'
+                className='absolute inset-y-0 right-0 pr-3 flex items-center leading-5'
+                onClick={toggleShowPassword}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+                >
+                  {showPassword ? <FaEyeSlash /> : < FaEye />}
+                </button>
                 {formik.touched.password && formik.errors.password && <p className='text-red-500'>{formik.errors.password}</p>}
                 </div>
               <div className='flex items-center justify-center'>
