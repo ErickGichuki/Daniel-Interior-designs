@@ -4,11 +4,14 @@ import {useFormik} from 'formik';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import {FaEye, FaEyeSlash} from 'react-icons/fa'
 
 
 function Signup() {
     const [error, setError] = useState(null);
     const [message, setMessage] = useState(null);
+    const [showPassword, setShowPassword] = useState(false);
+    const [showPasswordConfirmation, setShowPasswordConfirmation] = useState(false);
     const nav = useNavigate();
 
     const formik = useFormik({
@@ -50,6 +53,13 @@ function Signup() {
         
       });
       
+      const toggleShowPassword = () => {
+        setShowPassword(prevState => !prevState);
+      };
+      const toggleShowPasswordConfirmtion = () => {
+        setShowPasswordConfirmation(prevState => !prevState);
+      };
+
   return (
     <div className='min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-green-600 via-yellow-600 to-red-600'>
         <div className='md:w-1/2 lg: bg-black p-4 m-10 rounded-3xl'>
@@ -86,8 +96,8 @@ function Signup() {
                 value={formik.values.email}
                 />
                 {formik.touched.email && formik.errors.email && <p className='text-red-500'>{formik.errors.email}</p>}
-                </div>
-              <div className='mb-4'>
+                </div> 
+              <div className='mb-4 relative'>
                 <input 
                 className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
                 type='password' 
@@ -97,9 +107,16 @@ function Signup() {
                 onBlur={formik.handleBlur}
                 value={formik.values.password}
                 />
+                <button 
+                  type='button'
+                  className='absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5'
+                  onClick={toggleShowPassword}
+                  >
+                    {showPassword ? <FaEyeSlash /> : < FaEye />}
+                  </button>
                 {formik.touched.password && formik.errors.password && <p className='text-red-500'>{formik.errors.password}</p>}
                 </div>
-              <div className='mb-4'>
+              <div className='mb-4 relative'>
                 <input 
                 className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
                 type='password' 
@@ -109,6 +126,13 @@ function Signup() {
                 onBlur={formik.handleBlur}
                 value={formik.values.passwordConfirmation}
                 />
+                <button
+                type='button'
+                className='absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5'
+                onClick={toggleShowPasswordConfirmtion}
+                >
+                  {showPasswordConfirmation ? <FaEyeSlash /> : <FaEye />}
+                </button>
                 {formik.touched.passwordConfirmation && formik.errors.passwordConfirmation && <p className='text-red-500'>{formik.errors.passwordConfirmation}</p>}
               </div>
               {message && <p className='text-green-500'>{message}</p>}
