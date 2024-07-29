@@ -6,21 +6,11 @@ import sha1 from 'sha1';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-async function isPasswordPwned(password){
-    const hash = sha1(password);
-    const prefix = hash.substring(0,5);
-    const suffix = hash.substring(5).toUpperCase();
-  
-    const response = await axios.get(`https://api.pwnedpasswords.com/range/${prefix}`);
-    const pwnedList = response.data.split('\n').map(line => line.split(':')[0]);
-    return pwnedList.includes(suffix);
-  
-  }
 
 function Signup() {
-    const [error, setError] = useState(null)
-    const [message, setMessage] = useState(null)
-    const nav = useNavigate()
+    const [error, setError] = useState(null);
+    const [message, setMessage] = useState(null);
+    const nav = useNavigate();
 
     const formik = useFormik({
         initialValues: {
@@ -45,11 +35,6 @@ function Signup() {
         }),
         onSubmit: async(values) => {
             try {
-                const pwned= await isPasswordPwned(values.password);
-                if (pwned) {
-                    setError('This password has been pwned. Please choose another one.');
-                    return;
-                }
                 const response= await axios.post('/signup', values);
                 if (response.status === 201) {
                     setMessage('User created successfully')
