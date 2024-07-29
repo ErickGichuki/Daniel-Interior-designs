@@ -19,16 +19,16 @@ function Home() {
           <p className='text-lg mb-6'>We believe in creating spaces that inspire and elevate your everyday life. We work closely with you to bring your vision to life, combining functionality with aesthetic appeal.</p>
             <div className='flex flex-col md:flex-row justify-center mt-12 space-y-4 md:space-y-0 md:space-x-4 mx-4'>
               <button
-              className='bg-black text-white p-3 rounded-2xl hover:bg-indigo-400 hover:text-black'
+              className='bg-black text-white p-3 rounded-2xl'
               >
                 <a href='/about'>
-                <span>Who we are</span>
+                <span>Who We Are</span>
                 <span className='text-yellow-400 mx-2 text-xl'>→</span>
                 </a>
               </button>
               <button
               className='bg-blue-500 text-white p-3 rounded-2xl hover:bg-blue-600 hover:border-white'>
-                <span>Watch video</span>
+                <span>Watch Video</span>
               </button>
             </div>
         </div>
