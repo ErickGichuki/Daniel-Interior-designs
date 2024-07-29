@@ -15,7 +15,7 @@ function Home() {
         backgroundPosition: 'center'
       }}>
         <div className='text-center pt-10 max-w-2xl mx-auto mb-4 py-20'>
-          <h1 className='text-4xl font-bold mb-4'>Transform Your Space with Daniel Interior Designs</h1>
+          <h1 className='text-4xl font-bold mb-4 text-center'>Transform Your Space with Daniel Interior Designs</h1>
           <p className='text-lg mb-6'>We believe in creating spaces that inspire and elevate your everyday life. We work closely with you to bring your vision to life, combining functionality with aesthetic appeal.</p>
             <div className='flex flex-col md:flex-row justify-center mt-12 space-y-4 md:space-y-0 md:space-x-4 mx-4'>
               <button
