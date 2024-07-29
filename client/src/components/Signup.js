@@ -50,7 +50,7 @@ function Signup() {
                     setError('This password has been pwned. Please choose another one.');
                     return;
                 }
-                const response= await axios.post('/signup', values);
+                const response= await axios.post('https://daniel-interior-designs.onrender.com//signup', values);
                 if (response.status === 201) {
                     setMessage('User created successfully')
                     formik.resetForm();
