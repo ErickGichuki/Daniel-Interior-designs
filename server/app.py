@@ -3,13 +3,11 @@ from config import *
 from models import User, Service, Contact
 
 
-@app.errorhandler(404)
-def not_found(e):
-    return render_template("index.html")
 
-# @app.route('/')
-#def index():
-#    return 'Welcome to Daniel interiors'
+
+@app.route('/')
+def index():
+    return 'Welcome to Daniel interiors'
 
 @app.route('/signup', methods=['POST'])
 def signup():
