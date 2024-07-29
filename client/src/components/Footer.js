@@ -14,10 +14,10 @@ function Footer() {
           Let's connect on social media platforms for insights, latest news and engaging discussions.
         </p>
         <div className='flex space-x-4'>
-          <a href='' className='hover:opacity-75'>
+          <a href='#' className='hover:opacity-75'>
             <FontAwesomeIcon icon={faFacebook} className='rounded-full bg-blue-500 p-3 text-white'/>
           </a>
-          <a href='' className='hover:opacity-75'>
+          <a href='#' className='hover:opacity-75'>
             <FontAwesomeIcon icon={faXTwitter} className='rounded-full bg-black p-3 text-white'/>
           </a>
           <a href=' https://www.instagram.com/danielinteriors254?igsh=YzljYTk1ODg3Zg==' className='hover:opacity-75'>
@@ -44,10 +44,10 @@ function Footer() {
       <div className='text-white'>
         <h2 className='text-lg font-bold mb-2'>Solutions</h2>
         <ul className='list-none space-y-3'>
-            <li><a href='#' className='hover:text-underline'>Interior lighting</a></li>
-            <li><a href='#' className='hover:text-underline'>Space optimization</a></li>
-            <li><a href='#' className='hover:text-underline'>Painting & Flooring</a></li>
-            <li><a href='#' className='hover:text-underline'>Project Execution</a></li>
+            <li>Interior lighting</li>
+            <li>Space optimization</li>
+            <li>Painting & Flooring</li>
+            <li>Project Execution</li>
         </ul>
       </div>
 
