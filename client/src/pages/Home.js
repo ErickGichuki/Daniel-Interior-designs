@@ -27,8 +27,10 @@ function Home() {
                 </a>
               </button>
               <button
-              className='bg-blue-500 text-white p-3 rounded-2xl hover:bg-blue-600 hover:border-white'>
-                <span>Watch Video</span>
+              className='bg-blue-600 text-white p-3 rounded-2xl hover:bg-blue-800 hover:border-white'>
+                <a href='https://www.instagram.com/danielinteriors254?igsh=YzljYTk1ODg3Zg=='>
+                  <span>Let's Talk</span>
+                </a>
               </button>
             </div>
         </div>
