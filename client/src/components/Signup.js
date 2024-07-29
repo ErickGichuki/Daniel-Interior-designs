@@ -56,7 +56,7 @@ function Signup() {
       const toggleShowPassword = () => {
         setShowPassword(prevState => !prevState);
       };
-      const toggleShowPasswordConfirmtion = () => {
+      const toggleShowPasswordConfirmation = () => {
         setShowPasswordConfirmation(prevState => !prevState);
       };
 
@@ -100,7 +100,7 @@ function Signup() {
               <div className='mb-4 relative'>
                 <input 
                 className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
-                type='password' 
+                type={showPassword ? 'text' : 'password'} 
                 name = 'password'
                 placeholder='Enter your password'
                 onChange={formik.handleChange}
@@ -109,8 +109,9 @@ function Signup() {
                 />
                 <button 
                   type='button'
-                  className='absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5'
+                  className='absolute inset-y-0 right-0 pr-3 flex items-center leading-5'
                   onClick={toggleShowPassword}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
                   >
                     {showPassword ? <FaEyeSlash /> : < FaEye />}
                   </button>
@@ -119,7 +120,7 @@ function Signup() {
               <div className='mb-4 relative'>
                 <input 
                 className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline' 
-                type='password' 
+                type={showPasswordConfirmation ? 'text' : 'password'} 
                 name = 'passwordConfirmation'
                 placeholder='Confirm your password'
                 onChange={formik.handleChange}
@@ -128,8 +129,9 @@ function Signup() {
                 />
                 <button
                 type='button'
-                className='absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5'
-                onClick={toggleShowPasswordConfirmtion}
+                className='absolute inset-y-0 right-0 pr-3 flex items-center leading-5'
+                onClick={toggleShowPasswordConfirmation}
+                aria-label={showPasswordConfirmation ? 'Hide password confirmation' : 'Show Password confirmation'}
                 >
                   {showPasswordConfirmation ? <FaEyeSlash /> : <FaEye />}
                 </button>
