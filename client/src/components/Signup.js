@@ -140,7 +140,7 @@ function Signup() {
               {message && <p className='text-green-500'>{message}</p>}
               {error && <p className='text-red-500'>{error}</p>}
               <div className='flex items-center justify-center'>
-                <button type='submit' className='bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline'>
+                <button type='submit' className='bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-7 rounded-xl focus:outline-none focus:shadow-outline'>
                     Sign Up
                 </button>
               </div>

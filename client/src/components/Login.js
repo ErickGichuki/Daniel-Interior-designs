@@ -98,11 +98,11 @@ function Login() {
                 {formik.touched.password && formik.errors.password && <p className='text-red-500'>{formik.errors.password}</p>}
                 </div>
               <div className='flex items-center justify-center'>
-                <button type='submit' className='bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline'>
+                <button type='submit' className='bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-7 rounded-xl focus:outline-none focus:shadow-outline'>
                     Log in
                 </button>
               </div>
-              <p className='text-center text-gray-500 text-sm mt-4'>Don't have an account? <Link to='/' className='text-green-600 hover:text-green-700'>Create one</Link> here</p>
+              <p className='text-center text-gray-500 text-sm mt-4'>Don't have an account? <Link to='/' className='text-blue-600 hover:text-blue-700'>Create one</Link> here</p>
             </form>
       </div>
     </div>
