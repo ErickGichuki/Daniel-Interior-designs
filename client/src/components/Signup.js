@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import * as Yup from 'yup';
 import {useFormik} from 'formik';
 import axios from 'axios';
-import sha1 from 'sha1';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
