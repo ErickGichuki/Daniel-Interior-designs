@@ -87,5 +87,26 @@ def get_service():
     service_list = [service.to_dict() for service in services]
     return make_response(jsonify(service_list), 200)
 
+@app.route('/reset_password', methods=['POST'])
+def reset_password():
+    my_data = request.get_json()
+    email = my_data.get('email')
+    new_password = my_data.get('new_password')
+
+    if not email:
+        return make_response(jsonify({'message': 'Email is required'}), 400)
+
+    user = User.query.filter_by(email=email).first()
+    if not user:
+        return make_response(jsonify({'message': 'Email not found'}), 404)
+
+    if new_password:
+        hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
+        user.password = hashed_password
+        db.session.commit()
+        return make_response(jsonify({'message': 'Password has been reset successfully'}), 200)
+    else:
+        return make_response(jsonify({'message': 'New password is required'}), 400)
+    
 if __name__ == '__main__':
     app.run(debug=True)

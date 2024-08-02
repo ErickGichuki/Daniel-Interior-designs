@@ -97,6 +97,9 @@ function Login() {
                 </button>
                 {formik.touched.password && formik.errors.password && <p className='text-red-500'>{formik.errors.password}</p>}
                 </div>
+              <div className='flex justify-end mb-2 mt-2'>
+                <Link to='/reset_password' className='text-blue-600 hover:text-blue-800'>Forgot Password?</Link>
+              </div>
               <div className='flex items-center justify-center'>
                 <button type='submit' className='bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-7 rounded-xl focus:outline-none focus:shadow-outline'>
                     Log in
