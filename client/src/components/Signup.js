@@ -113,7 +113,7 @@ function Signup() {
                   onClick={toggleShowPassword}
                   aria-label={showPassword ? 'Hide password' : 'Show password'}
                   >
-                    {showPassword ? <FaEyeSlash /> : < FaEye />}
+                    {showPassword ? <FaEye /> : < FaEyeSlash />}
                   </button>
                 {formik.touched.password && formik.errors.password && <p className='text-red-500'>{formik.errors.password}</p>}
                 </div>
@@ -133,7 +133,7 @@ function Signup() {
                 onClick={toggleShowPasswordConfirmation}
                 aria-label={showPasswordConfirmation ? 'Hide password confirmation' : 'Show Password confirmation'}
                 >
-                  {showPasswordConfirmation ? <FaEyeSlash /> : <FaEye />}
+                  {showPasswordConfirmation ? <FaEye/> : <FaEyeSlash />}
                 </button>
                 {formik.touched.passwordConfirmation && formik.errors.passwordConfirmation && <p className='text-red-500'>{formik.errors.passwordConfirmation}</p>}
               </div>

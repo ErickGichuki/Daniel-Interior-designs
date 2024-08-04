@@ -93,7 +93,7 @@ function Login() {
                 onClick={toggleShowPassword}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
                 >
-                  {showPassword ? <FaEyeSlash /> : < FaEye />}
+                  {showPassword ? <FaEye /> : < FaEyeSlash />}
                 </button>
                 {formik.touched.password && formik.errors.password && <p className='text-red-500'>{formik.errors.password}</p>}
                 </div>

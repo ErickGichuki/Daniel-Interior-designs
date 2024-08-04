@@ -91,7 +91,7 @@ function ResetPassword() {
                             onClick={toggleShowPassword}
                             aria-label={showPassword ? 'Hide password' : 'Show password'}
                         >
-                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                            {showPassword ? <FaEye /> : <FaEyeSlash />}
                         </button>
                         {formik.touched.newPassword && formik.errors.newPassword && (
                             <p className='text-red-500'>{formik.errors.newPassword}</p>
