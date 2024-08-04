@@ -18,7 +18,14 @@ function ResetPassword() {
         },
         validationSchema: Yup.object({
             email: Yup.string().email('Invalid email').required('Email is required'),
-            newPassword: Yup.string().required('New password is required')
+            newPassword: Yup.string()
+            .required('New password is required')
+            .min(8, 'Password must be at least 8 characters long')
+            .matches(/[a-z]/, 'Password must contain atleast one lowercase letter')
+            .matches(/[A-Z]/, 'Password must contain at least one uppercase letter')
+            .matches(/[0-9]/, 'Password must have at least one number')
+            .matches(/[@$!%*?&]/, 'Password must contain atleast one special character')
+
         }),
         onSubmit: async (values) => {
             try {
