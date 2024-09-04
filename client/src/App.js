@@ -6,7 +6,6 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-import ResetPassword from "./components/ForgotPassword";
 
 function App() {
   return (
