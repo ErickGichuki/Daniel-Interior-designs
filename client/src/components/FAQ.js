@@ -30,9 +30,9 @@ const FAQ = () => {
         "Our pricing varies based on the scope of the project. We offer free initial consultations to discuss your needs and provide a detailed quote.",
     },
     {
-      question: "How long does a typical project take?",
+      question: "How do we contact the support does a typical project take?",
       answer:
-        "The duration of a project depends on its complexity, but we strive to complete most projects within 4 to 8 weeks from the start date.",
+        "The duration of a project depends on its complexity, but we strive to complete as early as possible.",
     },
   ];
 
@@ -44,7 +44,7 @@ const FAQ = () => {
     <div className="bg-gray-100 py-10 mt-5 rounded-lg">
       <div className="max-w-3xl mx-auto text-center text-gray-800 px-4">
         <h2 className="text-2xl md:text-3xl font-bold">
-          Frequently Asked Questions
+          Frequently Asked <span className="text-blue-600">Questions</span>
         </h2>
         <p className="mt-2 mb-6 text-md md:text-base text-gray-600">
           Here are some frequently asked questions about our interior design
