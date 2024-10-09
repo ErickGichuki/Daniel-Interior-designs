@@ -27,7 +27,7 @@ function Login() {
           localStorage.setItem("token", response.data.access_token);
           localStorage.setItem("user", JSON.stringify(response.data.user));
           setMessage("Logged in sucessfully");
-          navigate("/chat");
+          navigate("/services");
           formik.resetForm();
         }
       } catch (error) {
