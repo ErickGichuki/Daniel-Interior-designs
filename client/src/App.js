@@ -6,17 +6,19 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import Chat from "./components/Chat";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Signup />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </Router>
   );
